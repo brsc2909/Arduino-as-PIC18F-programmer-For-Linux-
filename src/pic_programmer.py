@@ -31,6 +31,10 @@ def getOut():
   print "For help use --help"
   sys.exit(2)
 
+
+######################################
+#       connect to arduino           #
+######################################
 def initArduino(port, ):
   # set up connection with Arduino
   if port == "":
@@ -90,6 +94,17 @@ def erase(arduino):
     else:
       print "Couldn't erase the chip."
       sys.exit(1)
+
+
+#########################################
+#      Read content of the chip         #
+######################################### 
+def readPIC(arduino):
+  # TODO:
+  # write function to read firmware from pic. arduino sketch has function to read deviceID from the chip. 
+  # should be able to expand on this function to read the full chip, then again i could be wrong
+  print "reading..... beep beep beep"
+
 
 #########################################
 #       write hex file to pic           #
